@@ -17,10 +17,9 @@ start:
 loop:
 	movff 	0x00, PORTC	    ; 0x00 is the counter
 	movff   PORTD, 0x01	    ; 0x01 is how much to iterate by
-	movf	0x01, W
-	addwf 	0x00, A
+	movf	0x01, W		    ; send 0x01(iteration)to W
+	addwf 	0x00, A		    ; Add W (iteration) to 0x00 (counter)
 test:
-	movwf	0x00, A		    ; Send W to 0x00
 	movlw 	0xff
 	cpfsgt 	0x00, A
 	bra 	loop		    ; Not yet finished goto start of loop again
