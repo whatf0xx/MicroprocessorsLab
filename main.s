@@ -37,7 +37,7 @@ success:
 	movlw 0x00
 	movwf TRISH, A
 	movlw 0xff
-	movwf PORTH, A		;FAILURE LIGHTS UP PORT H
+	movwf PORTH, A		;SUCCESS LIGHTS UP PORT H
 	
 finish:
 	end
